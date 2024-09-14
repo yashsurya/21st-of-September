@@ -2,6 +2,7 @@ const count = document.getElementById('count');
 const head = document.getElementById('head');
 const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
+const button = document.getElementById('play-pause-button');
 
 const config = {
   birthdate: 'Sept 21, 2024',
@@ -13,6 +14,8 @@ function hideEverything() {
   count.style.display = 'none';
   giftbox.style.display = 'none';
   canvasC.style.display = 'none';
+  button.style.display = 'none';
+
 }
 
 hideEverything();
@@ -487,15 +490,29 @@ x = setInterval(function() {
     }
 
     function showfireworks() {
+      const audio = document.getElementById('background-music');
+      audio.play()
       canvasC.style.display = 'initial';
       setTimeout(anim, 1500);
     }
 
     init();
   }
-
-  // if (distance < 0) {
-  //     clearInterval(x);
-  //     console.log("happy birthday");
-  // }
 }, second);
+
+document.addEventListener('DOMContentLoaded', function() {
+    const audio = document.getElementById('background-music');
+    const button = document.getElementById('confetti');
+
+    // Set initial button text
+    audio.play();
+    //button.textContent = 'Play';
+
+    button.addEventListener('click', function() {
+        if (audio.paused) {
+            audio.play();
+        } else {
+            audio.pause();
+        }
+    });
+});
