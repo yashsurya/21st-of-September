@@ -19,19 +19,23 @@ body {
   text-align: center;
 }
 
+
 h1 {
   font-weight: normal;
+  font-size: 1.4em;
+
 }
 li {
   display: inline-block;
-  font-size: 1.5em;
+  font-size: 0.7em;
   list-style-type: none;
   padding: 1em;
   text-transform: uppercase;
-}
+  padding: 5px 15px;
+  }
 li span {
   display: block;
-  font-size: 4.5rem;
+  font-size: 2.5rem;
 }
 .merrywrap {
   position: absolute;
@@ -63,7 +67,7 @@ li span {
   position: absolute;
   color: #fff;
   width: 100%;
-  content: "Click Me!";
+  content: "Tap Tap!";
   left: 0;
   bottom: 0;
   font-size: 24px;
@@ -179,4 +183,37 @@ li span {
       transform: translateY(100%);
       opacity: 0;
  }
+}
+
+/* styles.css */
+
+.audio-container {
+    position: fixed;
+    bottom: 10px; /* Adjust this value as needed */
+    right: 10px;  /* Adjust this value as needed */
+    z-index: 1000; /* Ensure it's above other content */
+}
+
+.play-pause-btn {
+    background-color: #007bff; /* Blue background */
+    color: white; /* White text */
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    outline: none;
+    transition: background-color 0.3s ease;
+}
+
+.play-pause-btn:hover {
+    background-color: #0056b3; /* Darker blue on hover */
+}
+
+.play-pause-btn:focus {
+    outline: none;
+}
+
+.play-pause-btn:active {
+    background-color: #004085; /* Even darker blue when pressed */
 }
