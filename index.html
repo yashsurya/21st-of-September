@@ -14,6 +14,7 @@
 <body>
   <canvas id=c></canvas>
   <canvas id="confetti"></canvas>
+
   <div class="container" id="count">
     <h1 id="head">Countdown to your birthday:</h1>
     <ul>
@@ -23,6 +24,7 @@
       <li><span id="second"></span>seconds</li>
     </ul>
   </div>
+
   <div id="merrywrap" class="merrywrap">
     <canvas id="snowfall"></canvas>
     <div class="giftbox">
@@ -30,9 +32,14 @@
         <div></div>
       </div>
       <div class="box"></div>
-    </div>
-<audio id="background-music" src="music\background-music.mp3" control autoplay loop></audio>
+  </div>
+  
+<div class="audio-container">
+        <button id="play-pause-button" class="play-pause-btn">Play</button>
+        <audio id="background-music" src="music/background-music.mp3" autoplay preload="auto"></audio>
+</div>
 
+   
 </body>
 <script src="scripts/confetti.min.js" charset="utf-8"></script>
 <script src="scripts/index.js" charset="utf-8"></script>
