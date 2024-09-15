@@ -34,16 +34,15 @@ x = setInterval(function() {
   let now = new Date().getTime(),
     distance = countDown - now;
 
-  document.getElementById('day').innerText = Math.floor(distance / day);
-  document.getElementById('hour').innerText = Math.floor(
-    (distance % day) / hour
-  );
-  document.getElementById('minute').innerText = Math.floor(
-    (distance % hour) / minute
-  );
-  document.getElementById('second').innerText = Math.floor(
-    (distance % minute) / second
-  );
+  function addLeadingZero(value) {
+  return value < 10 ? '0' + value : value;
+}
+
+document.getElementById('day').innerText = addLeadingZero(Math.floor(distance / day));
+document.getElementById('hour').innerText = addLeadingZero(Math.floor((distance % day) / hour));
+document.getElementById('minute').innerText = addLeadingZero(Math.floor((distance % hour) / minute));
+document.getElementById('second').innerText = addLeadingZero(Math.floor((distance % minute) / second));
+
 
   let w = (c.width = window.innerWidth),
     h = (c.height = window.innerHeight),
