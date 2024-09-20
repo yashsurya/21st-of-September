@@ -6,7 +6,7 @@ const button = document.getElementById('play-pause-button');
 const redirbutton = document.getElementById('redirect-button');
 
 const config = {
-  birthdate: 'Sept 20, 2024',
+  birthdate: 'Sept 21, 2024',
   name: 'Gowri'
 };
 
