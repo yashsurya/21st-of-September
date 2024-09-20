@@ -19,6 +19,39 @@ body {
   text-align: center;
 }
 
+#surpriseImage {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    width: 100vw;
+}
+
+#surpriseImage img {
+    max-width: 100%;
+    max-height: 100%;
+    object-fit: contain; /* Ensures the image fits the screen while keeping its aspect ratio */
+}
+
+#redirect-button {
+display: none;
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color: #ffb3d9; /* Light baby pink */
+    color: white;
+    border: none;
+    border-radius: 10px; /* Rounded corners */
+    cursor: pointer;
+    z-index: 9999; /* Ensure the button is above all other layers */
+    transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+#redirect-button:hover {
+    background-color: #ff80c1; /* Slightly darker pink on hover */
+}
 
 h1 {
   font-weight: normal;
@@ -67,7 +100,7 @@ li span {
   position: absolute;
   color: #fff;
   width: 100%;
-  content: "Tap Tap!";
+  content: "";
   left: 0;
   bottom: 0;
   font-size: 24px;
