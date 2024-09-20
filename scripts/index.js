@@ -3,9 +3,10 @@ const head = document.getElementById('head');
 const giftbox = document.getElementById('merrywrap');
 const canvasC = document.getElementById('c');
 const button = document.getElementById('play-pause-button');
+const redirbutton = document.getElementById('redirect-button');
 
 const config = {
-  birthdate: 'Sept 21, 2024',
+  birthdate: 'Sept 20, 2024',
   name: 'Gowri'
 };
 
@@ -42,7 +43,6 @@ document.getElementById('day').innerText = addLeadingZero(Math.floor(distance / 
 document.getElementById('hour').innerText = addLeadingZero(Math.floor((distance % day) / hour));
 document.getElementById('minute').innerText = addLeadingZero(Math.floor((distance % hour) / minute));
 document.getElementById('second').innerText = addLeadingZero(Math.floor((distance % minute) / second));
-
 
   let w = (c.width = window.innerWidth),
     h = (c.height = window.innerHeight),
@@ -465,12 +465,19 @@ document.getElementById('second').innerText = addLeadingZero(Math.floor((distanc
 
     function init() {
       box.addEventListener('click', openBox, false);
+      box.addEventListener('click', showredirbutton, false);
       box.addEventListener('click', showfireworks, false);
     }
 
     function stepClass(step) {
       merrywrap.className = 'merrywrap';
       merrywrap.className = 'merrywrap step-' + step;
+    }
+    function showredirbutton(){
+setTimeout(function() {
+                // Show the second button after the delay
+               redirbutton.style.display = 'block';	
+            }, 8000);
     }
 
     function openBox() {
@@ -514,4 +521,8 @@ document.addEventListener('DOMContentLoaded', function() {
             audio.pause();
         }
     });
+});
+
+document.getElementById('redirect-button').addEventListener('click', function() {
+    window.location.href = "page.html";
 });
