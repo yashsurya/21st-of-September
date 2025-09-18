@@ -6,7 +6,7 @@ const button = document.getElementById('play-pause-button');
 const redirbutton = document.getElementById('redirect-button');
 
 const config = {
-  birthdate: 'Sept 21, 2024',
+  birthdate: 'Sept 21, 2025',
   name: 'Gowri'
 };
 
@@ -526,3 +526,4 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('redirect-button').addEventListener('click', function() {
     window.location.href = "page.html";
 });
+
