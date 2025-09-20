@@ -498,7 +498,7 @@ setTimeout(function() {
     function showfireworks() {
       const audio = document.getElementById('background-music');
       audio.play()
-      canvasC.style.display = 'initial';
+      canvasC.style.display = 'none';
       setTimeout(anim, 1500);
     }
 
@@ -526,4 +526,5 @@ document.addEventListener('DOMContentLoaded', function() {
 document.getElementById('redirect-button').addEventListener('click', function() {
     window.location.href = "page.html";
 });
+
 
